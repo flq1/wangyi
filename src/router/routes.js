@@ -1,13 +1,32 @@
 import Home from '../pages/Home/index.vue'
 import Buy from '../pages/Buy/index.vue'
 import Cart from '../pages/Cart/index.vue'
-import Class from '../pages/Class/index.vue'
+import Classification from '../pages/Classification/index.vue'
 import Personal from '../pages/Personal/index.vue'
+import Familylife from '../pages/Home/Familylife/index.vue'
+import Recommend from '../pages/Home/Recommend/index.vue'
+import Classcontent from '../pages/Classification/Classcontent/index.vue'
+import Collectsearch from '../pages/Classification/Collectsearch/index.vue'
 export default [
 
   {//首页
     path: '/home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: '/home/0',
+        component: Recommend
+      },
+      {
+        path: '/home/1',
+        component: Familylife
+      },
+      {
+        path: '/home',
+        redirect: '/home/0'
+      }
+
+    ]
   },
   {// 值得买
     path: '/buy',
@@ -18,15 +37,30 @@ export default [
     component: Cart
   },
   {// 分类
-    path: '/class',
-    component: Class
+    path: '/Classification',
+    component: Classification,
+    children: [
+      {
+        path: '/Classification/:id',
+        component: Classcontent
+      },
+      {
+        path: '/Classification',
+        redirect: '/Classification/11'
+      }
+    ]
   },
   {// 个人
     path: '/personal',
     component: Personal
   },
   {
+    path: '/Collectsearch/catelist',
+    component: Collectsearch
+  },
+  {
     path: '/',
-    redirect: ' /home'
+    redirect: '/home'
   }
+
 ]
