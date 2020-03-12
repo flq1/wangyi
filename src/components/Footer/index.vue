@@ -1,5 +1,8 @@
 <template>
-  <div class="Footer" v-show="$route.path.indexOf('/Collectsearch/catelist')===-1">
+  <div
+    class="Footer"
+    v-show="$route.path.indexOf('/Collectsearch')===-1 && $route.path.indexOf('/personal')===-1 "
+  >
     <router-link active-class class="router" to="/home">
       <van-icon name="wap-home-o" size="24px" :color="$route.path.indexOf('/home')!==-1?'red':''" />
       <span :class="$route.path.indexOf('/home')!==-1?'red':''">首页</span>

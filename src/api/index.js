@@ -29,3 +29,25 @@ export const reqcategoryL1List = () => {
     method: 'GET'
   })
 }
+// 关键字收搜
+export const reqkeyword = () => {
+  return axiosInstance({
+    url: '/Collectsearch/catelist',
+    method: 'GET'
+  })
+}
+
+export const reqbuy = () => {
+
+  return axiosInstance({
+    url: '/buy',
+    method: 'GET'
+  })
+}
+
+export const reqlogin = () => {
+  return axiosInstance({
+    url: '/login',
+    method: 'GET'
+  })
+}

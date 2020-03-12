@@ -7,6 +7,7 @@ import Familylife from '../pages/Home/Familylife/index.vue'
 import Recommend from '../pages/Home/Recommend/index.vue'
 import Classcontent from '../pages/Classification/Classcontent/index.vue'
 import Collectsearch from '../pages/Classification/Collectsearch/index.vue'
+import keyword from '../pages/keyword/index.vue'
 export default [
 
   {//首页
@@ -54,9 +55,24 @@ export default [
     path: '/personal',
     component: Personal
   },
+  // longin
+  {
+    path: '/personal/login',
+    component: Personal
+  },
+  //Success
+  {
+    path: '/personal/Success',
+    component: Personal
+  },
+
   {
     path: '/Collectsearch/catelist',
     component: Collectsearch
+  },
+  {
+    path: '/Collectsearch/keyword',
+    component: keyword
   },
   {
     path: '/',

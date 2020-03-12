@@ -5,7 +5,11 @@
       <span class="nav-log">网易严选</span>
       <div class="nav-input">
         <van-icon name="search" class="icon" />
-        <input type="text" placeholder="搜索商品, 共24253款好物" />
+        <input
+          type="text"
+          placeholder="搜索商品, 共24253款好物"
+          @click="$router.push('/Collectsearch/catelist')"
+        />
       </div>
       <div class="nav-login">登入</div>
     </div>
@@ -118,11 +122,8 @@ export default {
       pagination: {
         el: '.swiper-pagination',
         bulletElement: 'li',
-
       },
-
     });
-    console.log(this.$route.path)
   },
   computed: {
     ...mapState({ emojisindex: state => state.home.emojisindex })
@@ -152,7 +153,6 @@ export default {
       this.$router.push(`/home/${index}`)
       console.log(this.$router.push)
     }
-
   }
 }
 </script>

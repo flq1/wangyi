@@ -4,7 +4,7 @@
       <img alt="route" :src="state[0].bannerUrl" />
     </div>
     <div class="classcontent-commodity" v-if="state.length">
-      <van-grid :gutter="5" icon-size="80px" :column-num="3">
+      <van-grid :gutter="5" icon-size="70px" :column-num="3">
         <van-grid-item
           v-for="(item,index) in state"
           :key="index"

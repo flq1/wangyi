@@ -86,9 +86,9 @@ export default {
     .scroll-item
       height 50px
       line-height 50px
-      font-size 16px
+      font-size 15px
       text-align center
       &.active
-        border-left 2px solid red
+        border-left 1px solid red
         color red
 </style>

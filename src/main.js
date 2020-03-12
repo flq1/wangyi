@@ -9,11 +9,15 @@ Vue.use(Icon);
 Vue.use(Button);
 
 
+import { Form } from 'vant';
+
+Vue.use(Form);
 
 Vue.use(Sidebar);
 Vue.use(SidebarItem);
 /* eslint-disable no-new */
 Vue.component(Icon)
+Vue.component(Form)
 new Vue({
   el: '#app',
   components: {
